@@ -37,8 +37,8 @@ class TodoApp extends HTMLElement {
         this.$todoList.innerHTML = '';
 
         this._todos.forEach((todo, index) => {
-            let $todoItem = document.createElement('div');
-            $todoItem.innerHTML = todo.text; 
+            let $todoItem = document.createElement('to-do-item');
+            $todoItem.setAttribute('text', todo.text);
             this.$todoList.appendChild($todoItem);
         });
     }
